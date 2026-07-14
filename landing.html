@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrightWash Laundry Hub | Clean, Affordable & Quality Service</title>
+  <meta name="description" content="BrightWash Laundry Hub - Professional laundry services. Clean, affordable, and good quality service for your everyday needs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #070b13;
+      --card: rgba(17,24,39,0.6);
+      --border: rgba(255,255,255,0.06);
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --blue: #3b82f6;
+      --teal: #14b8a6;
+      --purple: #a855f7;
+      --amber: #f59e0b;
+    }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+</style>
+</head>
+<body>
+  <style>
+    /* Navigation */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 16px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(7,11,19,0.8);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--blue), var(--teal));
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 12px rgba(59,130,246,0.2);
+    }
+    .nav-logo-icon svg { width: 20px; height: 20px; color: white; }
+    .nav-brand { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.3px; }
+    .nav-brand span { background: linear-gradient(135deg, var(--blue), var(--teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-link { font-size: 0.8rem; font-weight: 500; color: var(--muted); transition: 0.2s; }
+    .nav-link:hover { color: var(--text); }
+    .btn-pos {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, var(--blue), var(--teal));
+      border-radius: 10px;
+      font-size: 0.78rem; font-weight: 700; color: white;
+      box-shadow: 0 4px 16px rgba(59,130,246,0.25);
+      transition: 0.2s;
+    }
+    .btn-pos:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(59,130,246,0.35); }
+    .btn-pos svg { width: 16px; height: 16px; }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+      overflow: hidden;
+      background: url('https://lh3.googleusercontent.com/pw/AP1GczMcDwlWfJwyPEs3EzlTO1Xi0T1OXf4l04qTpoMh_2d_AetnCGcOmt0XdlCz8uS-RGAR6R4xeDx2lflFij6pe3-H3ULU3IeqLagAXw-3lUOsYhp4d-yK=w2400') center/cover no-repeat;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(7,11,19,0.7);
+      z-index: 0;
+    }
+    .hero-orb {
+      position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.15;
+      animation: float 10s ease-in-out infinite; z-index: 0;
+    }
+    .hero-orb-1 { width: 400px; height: 400px; background: var(--blue); top: 10%; left: 10%; }
+    .hero-orb-2 { width: 500px; height: 500px; background: var(--teal); bottom: 10%; right: 10%; animation-delay: -5s; }
+    .hero-orb-3 { width: 300px; height: 300px; background: var(--purple); top: 50%; left: 50%; animation-delay: -3s; }
+    @keyframes float { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-30px) scale(1.05); } }
+
+    .hero-content { position: relative; z-index: 1; max-width: 700px; display: flex; flex-direction: column; align-items: center; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 14px;
+      background: rgba(20,184,166,0.1); border: 1px solid rgba(20,184,166,0.2);
+      border-radius: 20px;
+      font-size: 0.7rem; font-weight: 600; color: var(--teal);
+      margin-bottom: 24px;
+    }
+    .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 20px; text-align: center; }
+    .hero h1 span { background: linear-gradient(135deg, var(--blue), var(--teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 1.1rem; color: var(--muted); max-width: 500px; margin: 0 auto 36px; line-height: 1.6; text-align: center; }
+    .hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-hero {
+      padding: 14px 28px; border-radius: 12px; font-size: 0.85rem; font-weight: 700;
+      display: inline-flex; align-items: center; gap: 8px; transition: 0.2s; cursor: pointer; border: none;
+    }
+    .btn-hero-primary { background: linear-gradient(135deg, var(--blue), var(--teal)); color: white; box-shadow: 0 4px 20px rgba(59,130,246,0.3); }
+    .btn-hero-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(59,130,246,0.4); }
+    .btn-hero-secondary { background: rgba(255,255,255,0.05); color: var(--text); border: 1px solid var(--border); }
+    .btn-hero-secondary:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); }
+  </style>
+  <style>
+    /* Services Section */
+    .section { padding: 100px 24px; max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.7rem; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+    .section-title { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 16px; }
+    .section-desc { color: var(--muted); max-width: 500px; font-size: 0.95rem; margin-bottom: 48px; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .service-card {
+      background: var(--card); backdrop-filter: blur(8px);
+      border: 1px solid var(--border); border-radius: 18px;
+      padding: 28px; transition: 0.3s;
+    }
+    .service-card:hover { border-color: rgba(255,255,255,0.12); transform: translateY(-4px); }
+    .service-icon { font-size: 2rem; margin-bottom: 14px; }
+    .service-name { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+    .service-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; margin-bottom: 12px; }
+    .service-price { font-size: 0.85rem; font-weight: 800; color: var(--teal); }
+
+    /* Features */
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .feature-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+      padding: 32px; transition: 0.3s;
+    }
+    .feature-card:hover { border-color: rgba(255,255,255,0.12); }
+    .feature-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px; font-size: 1.4rem;
+    }
+    .feature-icon.blue { background: rgba(59,130,246,0.1); }
+    .feature-icon.teal { background: rgba(20,184,166,0.1); }
+    .feature-icon.purple { background: rgba(168,85,247,0.1); }
+    .feature-icon.amber { background: rgba(245,158,11,0.1); }
+    .feature-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; }
+    .feature-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+    /* CTA Section */
+    .cta-section {
+      text-align: center; padding: 80px 24px;
+      background: linear-gradient(180deg, transparent, rgba(59,130,246,0.03), transparent);
+    }
+    .cta-section h2 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+    .cta-section p { color: var(--muted); margin-bottom: 28px; }
+
+    /* Footer */
+    .footer {
+      padding: 32px 24px; text-align: center;
+      border-top: 1px solid var(--border);
+      font-size: 0.72rem; color: var(--muted);
+    }
+
+    @media (max-width: 768px) {
+      .nav { padding: 12px 16px; }
+      .nav-links .nav-link { display: none; }
+      .hero { padding: 100px 16px 60px; }
+      .section { padding: 60px 16px; }
+    }
+  </style>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczM06R1IdJmr9Vg-wS-_Ciy-PQH0d8UXG7a8Ul6Qmy0uzf-ck-N0qzQHnzSPWwWeKEkG_2_hHFM2JgZeC3oPxKt5XTMGR45aYiipkMdb_wQUhVSOfjdb=w2400" alt="BrightWash Laundry Hub" style="height:40px;">
+    </div>
+    <div class="nav-links">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#features" class="nav-link">Why Us</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="pos.html" class="btn-pos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        Open POS
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🫧 Professional Laundry Services</div>
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczM06R1IdJmr9Vg-wS-_Ciy-PQH0d8UXG7a8Ul6Qmy0uzf-ck-N0qzQHnzSPWwWeKEkG_2_hHFM2JgZeC3oPxKt5XTMGR45aYiipkMdb_wQUhVSOfjdb=w2400" alt="BrightWash Laundry Hub" style="max-width:340px;width:85%;margin-bottom:28px;filter:drop-shadow(0 4px 20px rgba(0,0,0,0.3));">
+      <p>Your trusted neighborhood laundry partner. We handle your clothes with care, delivering fresh results every time.</p>
+      <div class="hero-cta">
+        <a href="#services" class="btn-hero btn-hero-primary">View Our Services</a>
+        <a href="pos.html" class="btn-hero btn-hero-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          Staff POS Login
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="section-label">Our Services</div>
+    <div class="section-title">What We Offer</div>
+    <div class="section-desc">Professional laundry solutions at affordable prices. Fast turnaround, premium quality.</div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🫧</div>
+        <div class="service-name">Wash</div>
+        <div class="service-desc">Professional washing for up to 8kg per load. 38-minute cycle.</div>
+        <div class="service-price">₱70 / load</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🌬️</div>
+        <div class="service-name">Dry</div>
+        <div class="service-desc">Thorough drying cycle for all fabric types. 40-minute cycle.</div>
+        <div class="service-price">₱80 / load</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">👕</div>
+        <div class="service-name">Fold</div>
+        <div class="service-desc">Neat and careful folding of your clean garments.</div>
+        <div class="service-price">₱30 / load</div>
+      </div>
+      <div class="service-card" style="border-color:rgba(245,158,11,0.3);background:rgba(245,158,11,0.03);">
+        <div class="service-icon">⭐</div>
+        <div class="service-name">Full Service <span style="font-size:0.65rem;background:var(--amber);color:#000;padding:2px 6px;border-radius:8px;font-weight:800;">BEST VALUE</span></div>
+        <div class="service-desc">Complete Wash + Dry + Fold. 8kg max load. Save ₱0 vs individual!</div>
+        <div class="service-price">₱180 / load</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <div class="section-label">Why Choose Us</div>
+    <div class="section-title">The BrightWash Difference</div>
+    <div class="section-desc">We combine modern technology with genuine care for your garments.</div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon blue">🏪</div>
+        <div class="feature-title">Modern Equipment</div>
+        <div class="feature-desc">5 industrial-grade washing and drying machines ensure fast, efficient cleaning for all fabric types.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon teal">⏱️</div>
+        <div class="feature-title">Quick Turnaround</div>
+        <div class="feature-desc">Standard 24-hour service with express same-day options available for those urgent needs.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon purple">🪙</div>
+        <div class="feature-title">Loyalty Rewards</div>
+        <div class="feature-desc">Earn points with every order. Level up your account and unlock exclusive discounts and perks.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon amber">💰</div>
+        <div class="feature-title">Affordable Prices</div>
+        <div class="feature-desc">Quality service doesn't have to break the bank. Competitive rates for every budget.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <h2>Ready for Fresh, Clean Laundry?</h2>
+    <p>Drop off your clothes or contact us today. We make laundry easy.</p>
+    <a href="pos.html" class="btn-hero btn-hero-primary">Access POS System</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 BrightWash Laundry Hub. Clean, Affordable and Good Quality Service.</p>
+  </footer>
+
+</body>
+</html>
